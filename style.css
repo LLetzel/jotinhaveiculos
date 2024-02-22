@@ -1,0 +1,41 @@
+.fundo {
+	background-color: #262626;
+	height: 100px; /* adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    
+}
+
+.letras1 {
+    color: #9C9C9C;
+    display: flex;
+    align-items: center;
+}
+
+.letras2 {
+    color: #9C9C9C;
+    display: flex;
+    align-items: center;
+}
+
+.perfil img{
+    width: 50px;
+    color: #9C9C9C;
+    margin-right: 10%;
+}
+
+.logo img{
+    width: 550px;
+    margin-top: 1%;
+}
+
+.letras1, .letras2 {
+    height: 100px; /* set the height */
+    margin: 20px 100px 20px 100px; /* add a bottom margin of 20 pixels */
+}
+
+.faixared {
+	background-color: #ff0000;
+	height: 7px; /* adjust the height as needed */
+}
