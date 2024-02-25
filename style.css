@@ -1,125 +1,41 @@
-/* *{
-    margin: 0;
-    padding: 0; 
- }
- 
- 
- .fundo {
-     background-color: #262626;
-     height: 100px; /* adjust the height as needed */
-     /* display: flex;
-     align-items: center;
-     justify-content:center ;
-     
- } */
- 
- /* .letras1 {
-     color: #9C9C9C;
-     display: flex;
-     align-items: center;
-     font-size: 19px;
- }
- 
- .letras2 {
-     color: #9C9C9C;
-     display: flex;
-     align-items: center;
-     height: 60px;
-     margin-left: 90px; 
-     font-size: 19px;
- }
- 
- .perfil img{
-     width: 50px;
-     color: #9C9C9C;
-     margin-left: 100%;
- }
- 
- .logo img{
-     width: 550px;
-     margin-top: 1%;
- }
- 
- 
- .ctt {
-     margin-right: 10px;
- }
- 
- .sbn {
-     margin-left: 55px;
- }
- 
- .vnc{
-     margin-right: 10px;
- 
- }
- 
- .est {
-     margin-left: 50px;
- }
- 
- .faixared {
-     background-color: #ff0000;
-     height: 7px; /* adjust the height as needed */
+.fundo {
+	background-color: #262626;
+	height: 100px; /* adjust the height as needed */
+    display: flex;
+    align-items: center;
+    justify-content:center ;
+    
+}
 
+.letras1 {
+    color: #9C9C9C;
+    display: flex;
+    align-items: center;
+}
 
+.letras2 {
+    color: #9C9C9C;
+    display: flex;
+    align-items: center;
+}
 
-     * {
-         margin: 0;
-         padding: 0; 
-     }
-     
-     .fundo {
-         background-color: #262626;
-         height: 99%; /* adjust the height as needed */
-         display: flex;
-         align-items: center;
-         justify-content:center ;
-     }
-     
-     .letras1 {
-         color: #9C9C9C;
-         display: flex;
-         align-items: center;
-         font-size: 19px;
-     }
-     
-     .letras2 {
-         color: #9C9C9C;
-         display: flex;
-         align-items: center;
-         height: 60px;
-         margin-left: 90px; 
-         font-size: 19px;
-     }
-     
-     .perfil img{
-         width: 50px;
-         color: #9C9C9C;
-         margin-left: 60%;
-     }
-     
-     .logo img{
-         width: 555px;
-         margin-top: 0%;
-     }
-     
-     .ctt {
-         margin-right: 10px;
-     }
-     
-     .sbn {
-         margin-left: 50px;
-     }
-     
-     .vnc{
-         margin-right: 10px;
-     }
-     
-     .est {
-         margin-left: 50px;
-     }
-     
-     .faixared {
-         background-color: #ff00;
-     }
+.perfil img{
+    width: 50px;
+    color: #9C9C9C;
+    margin-right: 10%;
+}
+
+.logo img{
+    width: 550px;
+    margin-top: 1%;
+}
+
+.letras1, .letras2 {
+    height: 100px; /* set the height */
+    margin: 20px 100px 20px 100px; /* add a bottom margin of 20 pixels */
+}
+
+.faixared {
+	background-color: #ff0000;
+	height: 7px; /* adjust the height as needed */
+}
