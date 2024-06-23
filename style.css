@@ -1,129 +1,32 @@
-
-/* *{
+* {
     margin: 0;
-    padding: 0; 
- }
- 
- 
- .fundo {
-     background-color: #262626;
-     height: 100px; /* adjust the height as needed */
-     /* display: flex;
-     align-items: center;
-     justify-content:center ;
-     
- } */
- 
- /* .letras1 {
-     color: #9C9C9C;
-     display: flex;
-     align-items: center;
-     font-size: 19px;
- }
- 
- .letras2 {
-     color: #9C9C9C;
-     display: flex;
-     align-items: center;
-     height: 60px;
-     margin-left: 90px; 
-     font-size: 19px;
- }
- 
- .perfil img{
-     width: 50px;
-     color: #9C9C9C;
-     margin-left: 100%;
- }
- 
- .logo img{
-     width: 550px;
-     margin-top: 1%;
- }
- 
- 
- .ctt {
-     margin-right: 10px;
- }
- 
- .sbn {
-     margin-left: 55px;
- }
- 
- .vnc{
-     margin-right: 10px;
- 
- }
- 
- .est {
-     margin-left: 50px;
- }
- 
- .faixared {
-     background-color: #ff0000;
-     height: 7px; /* adjust the height as needed */
+    padding: 0;
 
-*{
-   margin: 0;
-   padding: 0; 
 }
 
-
-.fundo {
-	background-color: #262626;
-	height: 100px; /* adjust the height as needed */
+header {
+    background-color: #000000;
+    width: 100vw;
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content:center ;
-    
 }
 
-.letras1 {
-    color: #9C9C9C;
-    display: flex;
-    align-items: center;
-    font-size: 19px;
+#logo {
+    width: 20%;
+}
+#imglogo {
+    width: 100%;
 }
 
-.letras2 {
-    color: #9C9C9C;
-    display: flex;
-    align-items: center;
-    height: 60px;
-    margin-left: 90px; 
-    font-size: 19px;
+#linkheader {
+    text-decoration: none;
+    margin: 10px;
+    color: #F6F6F6;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: large;
 }
 
-.perfil img{
-    width: 50px;
-    color: #9C9C9C;
-    margin-left: 60%;
-}
-
-.logo img{
-    width: 550px;
-    margin-top: 1%;
-}
-
-
-.ctt {
-    margin-right: 10px;
-}
-
-.sbn {
-    margin-left: 55px;
-}
-
-.vnc{
-    margin-right: 10px;
-
-}
-
-.est {
-    margin-left: 50px;
-}
-
-.faixared {
-	background-color: #ff0000;
-	height: 7px; /* adjust the height as needed */
+#linkheader:hover{
+    text-decoration: underline;
 }
