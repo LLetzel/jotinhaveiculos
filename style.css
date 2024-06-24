@@ -54,7 +54,7 @@ body {
   color: #F6F6F6;
   background-color: transparent; 
   border: 2px solid #A61211;
-  width: 4%;
+  width: 8%;
   padding: 12px;
   text-align: center; /* Alinhar texto ao centro */
   text-decoration: none; /* Remover sublinhado padrão */
@@ -109,10 +109,11 @@ body {
     color: #F6F6F6;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: large;
+    transition: width 0.8s ease;
 }
 
 #linkheader:hover{
-    text-decoration: underline; 
+    text-decoration: underline 4px #c9302c;  
 }
 
 .fundo-escuro {
