@@ -1,0 +1,102 @@
+/* ----------- LOGIN ---------------*/
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.containerform {
+    background: transparent;
+    backdrop-filter: blur(70px);
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#F6F6F6 ;
+    z-index: 1;
+    width: 400px;
+    height: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+form {
+    color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    backdrop-filter: blur(70px);
+    /* border: 3px solid rgba(255, 255, 255, 0.5); */
+    border-radius: 10px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #c9302c; /* Vermelho */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d9534f; /* Vermelho escuro */
+}
+
+/* .fundo-img {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/img/loja.jpg');
+
+  background-position: center;
+  background-size: cover;
+  transition: 2S;
+  margin-bottom: 10%;
+} */
+
+.fundo-img:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/loja.jpg');
+    background-position: center;
+    background-size: cover;
+    transition: 2S;
+    z-index: -1; /* Posicione o pseudo-elemento atrás dos outros elementos */
+    filter: brightness(0.4); /* Aplique o brilho apenas no pseudo-elemento */
+  }
+
+#imglogo {
+    margin-bottom: 20px ;
+    width: 115%;
+    
+    
+}
