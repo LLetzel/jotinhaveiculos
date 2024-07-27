@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - JOTINHA VEICULOS</title>
     <link rel="stylesheet" href="login.css">
-    <link rel="shortcut icon" href="img/image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/./img/image.png" type="image/x-icon">
 </head>
 <body>
     <div class="fundo-img">
 		
 		
         <div class="containerform">
-            <img id="imglogo" src="./img/logo.jpeg" alt="logo jotinha">
-            <!-- <h1>Entrar</h1> -->
+            <img id="imglogo" src="/././img/logo.jpeg" alt="logo jotinha">
+
             <form action="#">
 
                 <div class="input-group">
@@ -24,8 +24,10 @@
                 <div class="input-group">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
+                    <a id="esqueceusenha" href="/./src/recuperar-senha/recuperar-senha.html">Esqueceu a senha?</a>
                 </div>
-
+                
+                <p id="naotemconta">Não tem uma conta? <a id="Cadastre-se" href="/./src/cadastro/cadastro.html">Cadastre-se!</a></p>
                 <button type="submit">Entrar</button>
 
             </form>
