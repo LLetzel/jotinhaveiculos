@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - JOTINHA VEICULOS</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="shortcut icon" href="/img/image.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="fundo-img">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href="/src/home/home.html">
+                        <img src="/img/logonome.png" alt="Logo">
+                    </a>
+                </div>
+            </div>
+            <div class="divisoria"></div>
+        </header>
+
+        <main>
+            <div class="profile-container" data-aos="fade-up">
+                <!-- Profile Header -->
+                <div class="profile-header">
+                    <div class="profile-cover">
+                        <div class="profile-avatar">
+                            <img src="/img/avatar-default.png" alt="Profile Picture">
+                            <button class="edit-avatar">
+                                <i class="fas fa-camera"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="profile-info">
+                        <h1>Nome do Usuário</h1>
+                        <p>usuario@email.com</p>
+                    </div>
+                </div>
+
+                <!-- Profile Navigation -->
+                <div class="profile-nav">
+                    <button class="nav-btn active" data-tab="personal">
+                        <i class="fas fa-user"></i>
+                        Dados Pessoais
+                    </button>
+                    <button class="nav-btn" data-tab="vehicles">
+                        <i class="fas fa-car"></i>
+                        Meus Veículos
+                    </button>
+                    <button class="nav-btn" data-tab="settings">
+                        <i class="fas fa-cog"></i>
+                        Configurações
+                    </button>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- Personal Info Tab -->
+                    <div class="tab-content active" id="personal">
+                        <div class="content-section" data-aos="fade-up">
+                            <h2>Informações Pessoais</h2>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Nome Completo</label>
+                                    <p>João da Silva</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>CPF</label>
+                                    <p>123.456.789-00</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Data de Nascimento</label>
+                                    <p>01/01/1990</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Telefone</label>
+                                    <p>(11) 98765-4321</p>
+                                </div>
+                            </div>
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                                Editar Informações
+                            </button>
+                        </div>
+
+                        <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                            <h2>Endereço</h2>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>CEP</label>
+                                    <p>12345-678</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Rua</label>
+                                    <p>Rua das Flores, 123</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Bairro</label>
+                                    <p>Centro</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Cidade/UF</label>
+                                    <p>São Paulo/SP</p>
+                                </div>
+                            </div>
+                            <button class="edit-btn">
+                                <i class="fas fa-edit"></i>
+                                Editar Endereço
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vehicles Tab -->
+                    <div class="tab-content" id="vehicles">
+                        <div class="vehicles-grid" data-aos="fade-up">
+                            <!-- Vehicle Card -->
+                            <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <img src="/img/car-placeholder.jpg" alt="Vehicle">
+                                </div>
+                                <div class="vehicle-info">
+                                    <h3>T-Cross 200 TSI</h3>
+                                    <p>2023 • 15.000 km</p>
+                                    <p class="price">R$ 120.000</p>
+                                </div>
+                                <div class="vehicle-actions">
+                                    <button class="edit-btn">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="delete-btn">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-vehicle-btn">
+                            <i class="fas fa-plus"></i>
+                            Adicionar Veículo
+                        </button>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div class="tab-content" id="settings">
+                        <div class="content-section" data-aos="fade-up">
+                            <h2>Segurança</h2>
+                            <div class="settings-group">
+                                <button class="settings-btn">
+                                    <i class="fas fa-key"></i>
+                                    Alterar Senha
+                                </button>
+                                <button class="settings-btn">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Autenticação em Dois Fatores
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="content-section" data-aos="fade-up" data-aos-delay="100">
+                            <h2>Preferências</h2>
+                            <div class="settings-group">
+                                <div class="toggle-setting">
+                                    <span>Notificações por Email</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="toggle-setting">
+                                    <span>Modo Escuro</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://kit.fontawesome.com/d0367c04e4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="perfil.js"></script>
+</body>
+</html>

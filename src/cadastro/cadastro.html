@@ -1,80 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - JOTINHA VEICULOS</title>
+    <title>Cadastro - JOTINHA VEICULOS</title>
     <link rel="stylesheet" href="cadastro.css">
-    <link rel="shortcut icon" href="/./img/image.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/img/image.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet">
 </head>
-
 <body>
     <div class="fundo-img">
+        <div class="containerform" data-aos="fade-up">
+            <div class="logo-container">
+                <img id="imglogo" src="/img/logonome.png" alt="logo jotinha">
+            </div>
 
-
-        <div class="containerform">
-            <img id="imglogo" src="/././img/logo.jpeg" alt="logo jotinha">
-
-
-
-            <form action="#">
-                <h1>Dados pessoais: </h1>
+            <form action="#" class="cadastro-form">
+                <h1>Dados pessoais</h1>
                 <div class="input-group">
-                    <label for="name">Nome completo: </label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Nome completo:</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="name" name="name" required>
+                    </div>
                 </div>
 
                 <div class="input-group">
                     <label for="nascimento">Data de nascimento:</label>
-                    <input type="date" id="nascimento" name="nascimento" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-calendar"></i>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
                 </div>
 
                 <div class="input-group">
                     <label for="cpf">CPF:</label>
-                    <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
-                        placeholder="000.000.000-00" required>
+                    <div class="input-wrapper">
+                        <i class="fas fa-id-card"></i>
+                        <input type="text" id="cpf" name="cpf" required>
+                    </div>
                 </div>
-
 
                 <div class="input-group">
                     <label for="sexo">Sexo:</label>
-                    <select name="sexo">
-                        <option value="masculino">Masculino</option>
-                        <option value="feminino">Feminino</option>
-                        <option value="nao-binario">Não Binário</option>
-                        <option value="outro">Outro</option>
-                    </select>
+                    <div class="input-wrapper">
+                        <i class="fas fa-venus-mars"></i>
+                        <select name="sexo" id="sexo" required>
+                            <option value="">Selecione</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="nao-binario">Não Binário</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
                 </div>
 
-                <p id="jatemconta">Já tem uma conta? <a id="entre" href="/./src/login/login.html">Entre</a></p>
-                <button onclick="src/cadastro2" type="button">Continuar</button>
+                <button type="submit" class="submit-btn">
+                    <span>Continuar</span>
+                    <div class="loading-spinner"></div>
+                </button>
 
+                <p id="jatemconta">Já tem uma conta? <a href="/src/login/login.html" id="entre">Entre</a></p>
             </form>
         </div>
     </div>
+
+    <script src="https://kit.fontawesome.com/d0367c04e4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="cadastro.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
-
 </html>
-
-<!-- Exemplo com Máscara (utilizando a biblioteca jQuery Mask Plugin) -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>  
-
-
-<script>
-    $(document).ready(function () {
-        $("#cpf").mask("000.000.000-00");
-
-    });
-</script>
-
-
-
-<!-- botão ir para cadastro 2  -->
-
-<script>function cadastro2() {
-        window.location.href = "/./src/cadastro/cadastro2";
-    }
-</script>

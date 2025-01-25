@@ -8,12 +8,30 @@
 
 body {
     font-family: 'Trebuchet MS', Arial, sans-serif;
-    background-color: #161616;
     color: #F6F6F6;
     padding-top: 80px;
+    background-color: #161616; /* Cor de fundo padrão */
+    min-height: 100vh; /* Garante que o corpo tenha pelo menos a altura da viewport */
+    position: relative; /* Para que o pseudo-elemento funcione corretamente */
 }
 
-.divisoria{
+body::before {
+    content: '';
+    position: fixed; /* Fixa a imagem de fundo */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/img/loja.jpg'); /* Adicione a imagem aqui */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    filter: brightness(0.3); /* Aplica o filtro de brilho apenas na imagem */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+.divisoria {
     width: 110%;
     height: 4px;
     background-color: #A71313;
@@ -27,17 +45,12 @@ header {
     flex-direction: column;
     background-color: #000;
     padding: 10px 10px 0px;
-    padding-top: 10;
     position: fixed; /* Torna a navbar fixa */
     top: 0; /* Fixa no topo da página */
     left: 0; /* Alinha à esquerda */
     right: 0; /* Alinha à direita */
     z-index: 1000; /* Garante que a navbar fique acima de outros elementos */
 }
-
-
-
-
 
 .container {
     display: flex;
@@ -47,15 +60,12 @@ header {
 
 .logo img {
     width: 15vw;
-    margin-right:3vw;
-    
+    margin-right: 3vw;
 }
 
 .logo {
     display: flex;
-    align-items: center;    
-    font-style: italic;
-    font-weight: bold;
+    align-items: center;
     font-size: large;
 }
 
@@ -85,8 +95,6 @@ nav a:hover {
     border: 2px solid #A61211;
     border-radius: 5px;
     text-decoration: none;
-    font-style: italic;
-    font-weight: bold;
     color: #F6F6F6;
     transition: background-color 0.3s;
 }
@@ -101,24 +109,24 @@ nav a:hover {
     height: 50px;
 }
 
-#carrodisponivel{
-    width: 400px;
-    height: 250px;
-}
-
 .hero {
     display: flex;
     flex-direction: column;
     position: relative;
     height: 100vh;
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden; /* Para evitar que o conteúdo transborde */
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
-.cards{
+.hero-content {
+    position: relative;
+    z-index: 2; /* Coloca o conteúdo acima da imagem */
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.cards {
     margin-top: 20vh;
     width: 90vw;
     display: flex;
@@ -128,8 +136,8 @@ nav a:hover {
 
 .card {
     position: relative;
-    width: 400px;
-    height: 250px;
+    width: 20vw;
+    height: 40vh;
     background-color: #f2f2f2;
     border-radius: 10px;
     display: flex;
@@ -142,11 +150,10 @@ nav a:hover {
     transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
-  .card svg {
-    width: 48px;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+  #carrodisponivel{
+    width: 400px;
+    height: 250px;
+}
   
   .card:hover {
     transform: scale(1.05);
@@ -161,10 +168,15 @@ nav a:hover {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f2f2f2;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo com opacidade */;
+    backdrop-filter: blur(10px);
     transform: rotateX(-90deg);
     transform-origin: bottom;
-    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .card:hover .card__content {
@@ -175,7 +187,7 @@ nav a:hover {
     margin: 0;
     font-size: 24px;
     color: #333;
-    font-weight: 700;
+    font-weight: bold;
   }
   
   .card:hover svg {
@@ -185,27 +197,31 @@ nav a:hover {
   .card__description {
     margin: 10px 0 0;
     font-size: 14px;
-    color: #777;
+    color: #333;
     line-height: 1.4;
   }
-  
 
-#imgfundo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0; /* Coloca a imagem atrás do conteúdo */
+.card__button {
+    opacity: 0;
+    transform: translateY(20px);
+    background-color: #A61211;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: all 0.3s ease;
 }
 
+.card:hover .card__button {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-
-.hero-content {
-    position: relative;
-    z-index: 2;
+.card__button:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
 }
 
 .card-container {
@@ -330,7 +346,7 @@ a{
 
 .carousel {
     padding: 40px 0;
-    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.8); */
 }
 
 .carousel h2 {
@@ -342,7 +358,8 @@ a{
 
 .carousel {
     padding: 40px 0;
-    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.8);
+} */
 }
 
 .carousel h2 {
@@ -362,11 +379,12 @@ a{
 
 .swiper-slide {
     text-align: center;
-    background: #000;
+    /* background: #000; */
+    backdrop-filter: blur(3px);
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 100px;
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
